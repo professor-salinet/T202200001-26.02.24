@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="./bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="mydiv"></div>
+
+    <script src="./bootstrap.bundle.min.js"></script>
+    <script src="./react.development.js"></script>
+    <script src="./popper.js"></script>
+    <script src="./react-dom.development.js"></script>
+    <script src="./babel.min.js"></script>
+    <script src="./react-router-dom.production.min.js"></script>
+
+    <script type="text/babel">
+        // variável Hello2
+        const Hello2 = (
+            <h2>Hello 2</h2>
+        );
+
+        // objeto <Hello />
+        function Hello() {
+            return <h1>Hello World!</h1>;
+        }
+
+        function Nome() {
+            return <h2>Rodrigo</h2>
+        }
+
+        function Sobrenome() {
+            return <h2>Salinet</h2>
+        }
+
+        function Endereco() {
+            return <h2>Senac</h2>
+        }
+
+        const container = document.getElementById('mydiv');
+        const root = ReactDOM.createRoot(container);
+        root.render(
+            <React.StrictMode>
+                <Nome />
+                <Sobrenome />
+                <Endereco />
+            </React.StrictMode>
+        ); // renderizar via objeto (retornavel de função)
+        // root.render(Hello2); // renderizar via variável (contém o objeto a ser renderizado)
+        // root.render(<h1> Teste </h1>); // renderização direto no renderizador
+    </script>
+
+</body>
+
+</html>
